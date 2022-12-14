@@ -1,0 +1,37 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Welcome to Astro.">
+	<div class="flex h-screen flex-col items-center justify-center">
+		<h1
+			class="rounded-tw mb-5 w-32 cursor-pointer border-2 border-black p-8 transition-all hover:bg-yellow-400 md:w-48 lg:w-64"
+		>
+			Welcome
+		</h1>
+		<ul class="list-disc">
+			<li>
+				<a
+					href="card"
+					class="underline decoration-yellow-400 transition-all hover:bg-slate-400 hover:decoration-teal-800"
+					>Card</a
+				>
+			</li>
+			<li>
+				<a
+					href="discord"
+					class="underline decoration-yellow-400 transition-all hover:bg-slate-400 hover:decoration-teal-800"
+					>Discord</a
+				>
+			</li>
+			<li class="bg-favourite mt-3 w-32 p-2 text-blue-100">is</li>
+			<li>a</li>
+			<li class="decoration-sky-500">list</li>
+		</ul>
+		<a
+			class="cursor-pointer underline decoration-sky-500 hover:decoration-orange-700"
+			>list</a
+		>
+		<!-- <div class="custom-class rounded-lg">hellou test</div> -->
+	</div>
+</Layout>

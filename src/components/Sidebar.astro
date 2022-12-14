@@ -1,0 +1,17 @@
+---
+import SidebarIcon from "./SidebarIcon.astro";
+import { Icon } from "astro-icon";
+import Card from "./Card.astro";
+---
+
+<div class="fixed top-0 left-0 flex h-screen w-16 flex-col bg-gray-900">
+	<SidebarIcon><Icon pack="mdi" name="fire" /></SidebarIcon>
+	<SidebarIcon text={"Chat 👩‍👩‍👧‍👦"}
+		><Icon pack="mdi" name="comment-text-outline" />
+	</SidebarIcon>
+	<SidebarIcon text={"Sleep 😴"}
+		><Icon pack="mdi" name="weather-night" />
+	</SidebarIcon>
+	<SidebarIcon><Icon pack="mdi" name="github" /></SidebarIcon>
+	<SidebarIcon><Icon pack="mdi" name="pig" /></SidebarIcon>
+</div>

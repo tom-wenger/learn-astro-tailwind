@@ -1,0 +1,14 @@
+---
+import TwButton from "../components/TwButton.astro";
+import Sidebar from "../components/Sidebar.astro";
+import Layout from "../layouts/Layout.astro";
+import Card from "./card.astro";
+---
+
+<Layout title="Discord">
+	<Sidebar />
+	<!-- <Card /> -->
+	<div class="flex h-screen flex-col items-center justify-center">
+		<Card />
+	</div>
+</Layout>
