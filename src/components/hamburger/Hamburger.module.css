@@ -1,0 +1,7 @@
+.line {
+  @apply absolute h-[4px] w-full bg-lambdaDarkBlue;
+}
+
+.line1 {
+  @apply bg-red-500;
+}

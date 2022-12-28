@@ -1,0 +1,64 @@
+---
+import style from "../custom.css";
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import { Icon } from "astro-icon";
+
+const links = ["Home", "About", "Projects", "Blog", "Contact"];
+---
+
+<Layout title="Responsive">
+	<nav
+		class="bg-slate-900 p-3 text-gray-100 shadow-xl md:flex md:items-center"
+	>
+		<div class="z-10 flex items-center justify-between pr-2">
+			<div
+				class="h-16 w-16 text-cyan-500 transition-colors hover:text-lime-400"
+			>
+				<Icon pack="mdi" name="palm-tree" />
+			</div>
+			<div
+				class="h-14 w-14 cursor-pointer text-white md:hidden"
+				id="menubutton"
+			>
+				<Icon pack="mdi" name="menu" id="hamburger" />
+				<Icon pack="mdi" name="close" id="close" class="hidden" />
+			</div>
+		</div>
+		<ul
+			id="primary-navigation"
+			class="absolute left-0 -z-10 w-full -translate-y-full bg-sky-900 pt-4 pl-7 opacity-0 transition-transform md:left-auto md:z-auto md:flex md:translate-y-0 md:items-center md:justify-end md:space-x-6 md:bg-inherit md:pt-0 md:pr-8 md:opacity-100 md:transition-none"
+		>
+			<!-- z-[-1] md:static md:z-auto md:flex md:items-center md:space-x-8 md:bg-inherit md:pl-0 absolute-->
+			{
+				links.map((link) => (
+					<li class="my-6 md:my-0">
+						<a
+							href="#"
+							class="cursor-pointer text-xl hover:text-cyan-200"
+						>
+							{link}
+						</a>
+					</li>
+				))
+			}
+			<button
+				class="mb-6 mt-2 rounded bg-cyan-400 px-6 py-2 text-xl text-white hover:bg-cyan-500 md:my-0"
+				>Get started</button
+			>
+		</ul>
+	</nav>
+</Layout>
+
+<script>
+	const menuButton = document.querySelector("#menubutton")!;
+	const hamburger = document.querySelector("#hamburger")!;
+	const close = document.querySelector("#close")!;
+	const nav = document.querySelector("#primary-navigation")!;
+	menuButton.addEventListener("click", () => {
+		hamburger.classList.toggle("hidden");
+		close.classList.toggle("hidden");
+		nav.classList.toggle("-translate-y-full");
+		nav.classList.toggle("opacity-0");
+	});
+</script>
